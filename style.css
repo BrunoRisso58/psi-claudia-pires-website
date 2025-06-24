@@ -43,7 +43,6 @@ p {
   font-weight: bold;
   font-family: 'Playfair Display', serif;
   margin-left: auto;
-  /* background-color: #1ebe5d; */
 }
 
 .logo img {
@@ -69,10 +68,6 @@ nav a {
   font-size: 1.1rem;
   transition: color 0.3s;
   vertical-align: middle;
-}
-
-nav a:hover {
-  color: #C97A7A;
 }
 
 .nav-button {
@@ -108,12 +103,16 @@ nav a:hover {
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
   font-family: 'Lora', sans-serif;
 }
 
 .hero h2 {
-  color: #6F7B84
+  color: #6F7B84;
+  font-size: 1.25rem
+}
+
+.hero a {
+  margin-top: 1.25rem;
 }
 
 .hero p {
@@ -164,7 +163,7 @@ nav a:hover {
 }
 
 .sombra {
-  width: 400px;
+  width: 600px;
   height: 20px;
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, transparent 80%);
   margin: -20px auto 0;
@@ -388,11 +387,6 @@ nav a:hover {
   background-color: #88B48B;
 }
 
-.processo .btn:hover {
-  background-color: #e2d5d7;
-  color: #a35d66;
-}
-
 .depoimentos {
   background-color: #A9C5AA;
   color: #6F7B84;
@@ -535,57 +529,6 @@ nav a:hover {
   max-height: 300px;
 }
 
-.produtos {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 40px 0;
-}
-
-.produto-card {
-  background-color: #fff8f4;
-  border: 1px solid #e4d7ce;
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 280px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.produto-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.produto-card h3 {
-  color: #5a3e36;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.produto-card p {
-  color: #6a5048;
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
-.btn-comprar {
-  display: inline-block;
-  background-color: #b48b7d;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-comprar:hover {
-  background-color: #a07466;
-}
-
 .contatos {
   text-align: center;
 }
@@ -689,13 +632,49 @@ footer span a {
   vertical-align: middle;
 }
 
+@media (max-width: 1920px) {
+  header {
+    padding: 2.5rem 5rem;
+  }
+
+  .hero {
+    padding: 0rem 15rem;
+  }
+
+  .sobre {
+    padding: 4rem 20rem;
+  }
+
+  .faq {
+    padding: 4rem 10rem;
+  }
+}
+
 @media (max-width: 1700px) {
+  header {
+    padding: 2.5rem 0;
+  }
+
+  .logo span {
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .shrink {
+    padding: 1rem 0;
+  }
+
   .hero {
     padding: 0rem 10rem;
   }
 
   .sobre {
     padding: 4rem 12rem;
+  }
+
+  .container {
+    width: 90%;
   }
 
   .faq {
@@ -712,24 +691,6 @@ footer span a {
 @media (max-width: 1280px) {
   header {
     justify-content: center;
-  }
-
-  .produtos-digitais {
-    padding: 4rem 0;
-  }
-}
-
-@media (max-width: 1024px) {
-  header {
-    padding: 2rem 2rem;
-  }
-
-  nav ul {
-    gap: 1.25rem;
-  }
-
-  .shrink {
-    padding: 1.5rem 0;
   }
 
   .hero {
@@ -754,6 +715,26 @@ footer span a {
     max-width: 100%;
   }
 
+  .produtos-digitais {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  nav ul li {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .shrink {
+    padding: 1.5rem 0;
+  }
+
   #cta-text {
     text-align: center;
   }
@@ -769,6 +750,10 @@ footer span a {
 
   .sobre .texto p {
     text-align: start;
+  }
+
+  .especialidades {
+    max-width: 90%;
   }
 
   footer {
@@ -790,10 +775,6 @@ footer span a {
 }
 
 @media (max-width: 768px) {
-  nav ul li {
-    display: none;
-  }
-  
   .shrink {
     padding: 1.5rem 0;
   }
@@ -814,6 +795,19 @@ footer span a {
     padding: 4rem 4rem;
   }
 
+  .especialidades {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .especialidades-texto {
+    max-width: 100%;
+  }
+
+  .right-image {
+    max-width: 100%;
+  }
+
   .faq {
     max-width: 100%;
   }
@@ -826,6 +820,16 @@ footer span a {
 @media (max-width: 450px) {
   .hero .text {
     max-width: 100%;
+    margin-left: 0;
+    padding: 1rem 2rem;
+  }
+
+  .sombra {
+    width: 350px;
+    height: 20px;
+    background: radial-gradient(ellipse at left, rgba(0,0,0,0.2) 0%, transparent 80%);
+    margin: -20px auto 0;
+    border-radius: 50%;
   }
   
   .hero .image {
@@ -838,9 +842,32 @@ footer span a {
     display: block;
   }
 
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+  .sobre {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .especialidades {
+    padding: 0;
+    max-width: 100%;
+    margin-left: 0; 
+  }
+
+  .right-image {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .tcc {
+    max-width: 100%;
+  }
+
+  .processo .container .image {
+    display: none;
+  }
+
+  .depoimentos {
+    padding: 2rem;
   }
 }
 
