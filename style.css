@@ -158,7 +158,7 @@ nav a {
 }
 
 .hero .image img {
-  width: 600px;
+  width: 550px;
   object-fit: contain;
 }
 
@@ -334,6 +334,7 @@ nav a {
 .sobre .imagem {
   flex: 1;
   max-width: 500px;
+  min-height: 100vh;
 }
 
 .sobre img {
@@ -715,8 +716,9 @@ footer span a {
     max-width: 100%;
   }
 
-  .produtos-digitais {
-    padding: 4rem 0;
+  .sobre .imagem {
+    max-width: 75vw;
+    min-height: 100vh;
   }
 }
 
@@ -746,6 +748,12 @@ footer span a {
   .sobre {
     padding: 4rem 5rem;
     text-align: center;
+  }
+
+  .sobre .imagem {
+    max-width: 50vw;
+    min-height: 50vh;
+    margin: auto;
   }
 
   .sobre .texto p {
@@ -845,6 +853,11 @@ footer span a {
   .sobre {
     padding: 4rem 2rem;
     text-align: center;
+  }
+
+  .sobre .imagem {
+    max-width: 75vw;
+    min-height: 25vh;
   }
 
   .especialidades {
